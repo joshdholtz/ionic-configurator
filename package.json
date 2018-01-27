@@ -1,0 +1,16 @@
+{
+  "name": "ionic-configurator",
+  "version": "0.1.0",
+  "description": "Dynamically configure Ionic (Cordova) config.xml",
+  "bin": {
+    "ionic-config": "./bin/index.js"
+  },
+  "scripts": {
+    "ionic-config": "./bin/index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mustache": "^2.3.0"
+  }
+}
