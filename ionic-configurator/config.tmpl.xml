@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="{{id}}" version="{{version}}" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <hook type="before_plugin_install" src="scripts/afterPluginInstall.js" />
-    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
+    <hook src="ionic-configurator/plugin_add_or_rm.js" type="before_plugin_add" />
+    <hook src="ionic-configurator/plugin_add_or_rm.js" type="after_plugin_add" />
+    <hook src="ionic-configurator/plugin_add_or_rm.js" type="before_plugin_rm" />
+    <hook src="ionic-configurator/plugin_add_or_rm.js" type="after_plugin_rm" />
     <name>{{name}}</name>
     <description>{{description}}</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
