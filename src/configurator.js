@@ -1,5 +1,5 @@
 module.exports = {
-  configure: function(configFilePath, environmentFilePath, outputFilePath) {
+  configure: function(configFilePath, environmentFilePath, outputFilePath, outputEnvFilePath) {
     var Mustache = require('mustache'); 
     var fs = require('fs');
     
@@ -15,7 +15,14 @@ module.exports = {
       if (err) {
         return console.log(err);
       }
-      console.log("The file was saved!");
+      console.log("The config file was saved!");
+    });
+
+    fs.writeFile(outputEnvFilePath, JSON.stringify(environmentJSON), function(err) {
+      if (err) {
+        return console.log(err);
+      }
+      console.log("The env file was saved!");
     });
   },
   hook: function(hook, configPath, configTmplPath) {
